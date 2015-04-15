@@ -1,0 +1,2 @@
+#docker
+alias dkill="docker ps | awk 'NR>1 {print $1}' | sed s/\n/\ / | xargs docker rm -f"
