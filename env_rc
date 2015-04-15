@@ -1,5 +1,5 @@
 #source <(curl https://raw.githubusercontent.com/daviddenton/rc/master/env_rc)
 
 #docker
-alias dkill=docker ps | awk 'NR>1 {print $1}' | sed s/\n/\ / | xargs docker rm -f
+alias dkill="docker ps | awk 'NR>1 {print $1}' | sed s/\n/\ / | xargs docker rm -f"
 
