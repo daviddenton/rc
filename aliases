@@ -7,6 +7,10 @@ alias .......=../../../../../..
 alias ls='ls --color=tty'
 
 #docker
+drmf() {
+  docker rm -f $1
+}
+alias drm=drmf
 alias dkill='docker stop $(docker ps -a -q)'
 alias dps='docker ps'
 
