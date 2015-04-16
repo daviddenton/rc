@@ -7,11 +7,11 @@ alias .......=../../../../../..
 alias ls='ls --color=tty'
 
 #docker
-alias dkill="docker stop $(docker ps -a -q"
-alias dps="docker ps"
+alias dkill='docker stop $(docker ps -a -q)'
+alias dps='docker ps'
 
 #git
-alias gp="git push"
-alias gst="git status"
-alias grh="git reset --hard"
-alias gup="git pull --rebase"
+alias gp='git push'
+alias gst='git status'
+alias grh='git reset --hard'
+alias gup='git pull --rebase'
