@@ -11,7 +11,7 @@ drmf() {
   docker rm -f $1
 }
 alias drm=drmf
-alias dkill='docker stop $(docker ps -a -q)'
+alias dkill='docker rm -f $(docker ps -aq)'
 alias dps='docker ps'
 
 #git
