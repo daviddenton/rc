@@ -20,4 +20,4 @@ alias grh='git reset --hard'
 alias gup='git pull --rebase'
 
 #get wifi password
-alias wifi="security find-generic-password -ga `/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'` | grep 'password:'"
+#alias wifi="security find-generic-password -ga `/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'` | grep 'password:'"
