@@ -2,6 +2,7 @@ url=https://raw.githubusercontent.com/daviddenton/rc/master/aliases
 echo "downloading latest shell aliases from $url"
 . <(curl $url)
 
-export DOCKER_HOST=tcp://127.0.0.1:2376
-export DOCKER_CERT_PATH=/Users/david/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST="tcp://127.0.0.1:2376" 
+alias docker='docker --tlsverify=false'
+#export DOCKER_CERT_PATH=/Users/david/.boot2docker/certs/boot2docker-vm
+#export DOCKER_TLS_VERIFY=1
