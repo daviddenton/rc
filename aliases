@@ -9,9 +9,11 @@ alias .......=../../../../../..
 drmf() {
   docker rm -f $1
 }
+alias docker='docker --tlsverify=false'
 alias drm=drmf
 alias dkill='docker rm -f $(docker ps -aq)'
 alias dps='docker ps'
+alias dup='docker-machine start boot2docker-vm'
 
 #git
 alias gp='git push'
@@ -23,5 +25,4 @@ alias gup='git pull --rebase'
 #alias wifi="security find-generic-password -ga `/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'` | grep 'password:'"
 
 export DOCKER_HOST="tcp://127.0.0.1:2376" 
-alias docker='docker --tlsverify=false'
 alias oc='sudo openconnect -q --script=~/dev/client/useful/vpn-script-wrapper --user ddl0296 vpn.springer-sbm.com'
