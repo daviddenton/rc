@@ -4,5 +4,4 @@ echo "downloading latest shell aliases from $url"
 
 export DOCKER_HOST="tcp://127.0.0.1:2376" 
 alias docker='docker --tlsverify=false'
-#export DOCKER_CERT_PATH=/Users/david/.boot2docker/certs/boot2docker-vm
-#export DOCKER_TLS_VERIFY=1
+alias oc='sudo openconnect -q --script=~/dev/client/useful/vpn-script-wrapper --user ddl0296 vpn.springer-sbm.com'
