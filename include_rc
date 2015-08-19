@@ -1,7 +1,3 @@
 url=https://raw.githubusercontent.com/daviddenton/rc/master/aliases
 echo "downloading latest shell aliases from $url"
 . <(curl $url)
-
-export DOCKER_HOST="tcp://127.0.0.1:2376" 
-alias docker='docker --tlsverify=false'
-alias oc='sudo openconnect -q --script=~/dev/client/useful/vpn-script-wrapper --user ddl0296 vpn.springer-sbm.com'
