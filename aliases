@@ -9,7 +9,6 @@ alias .......=../../../../../..
 drmf() {
   docker rm -f $1
 }
-alias docker='/usr/bin/docker --tlsverify=false'
 alias drm=drmf
 alias dkill='docker rm -f $(docker ps -aq)'
 alias dps='docker ps'
@@ -24,6 +23,8 @@ alias ls='ls --color=auto'
 
 #OSX
 if [[ $platform == 'Darwin' ]]; then
+  alias docker='/usr/bin/docker --tlsverify=false'
+
   alias dup='docker-machine start boot2docker-vm'
 
   alias wifi="security find-generic-password -ga `/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'` | grep 'password:'"
