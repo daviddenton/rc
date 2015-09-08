@@ -13,7 +13,6 @@ alias docker='docker --tlsverify=false'
 alias drm=drmf
 alias dkill='docker rm -f $(docker ps -aq)'
 alias dps='docker ps'
-alias dup='docker-machine start boot2docker-vm'
 
 #git
 alias gp='git push'
@@ -21,23 +20,31 @@ alias gst='git status'
 alias grh='git reset --hard'
 alias gup='git pull --rebase'
 
-#get wifi password
-#alias wifi="security find-generic-password -ga `/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'` | grep 'password:'"
+alias ls='ls --color=auto'
 
-export DOCKER_HOST="tcp://127.0.0.1:2376" 
-alias oc='sudo openconnect -q --script=~/dev/client/useful/vpn-script-wrapper --user ddl0296 vpn.springer-sbm.com'
+#OSX
+if [[ $platform == 'Darwin' ]]; then
+  alias dup='docker-machine start boot2docker-vm'
 
-# termtile
-alias tul='osascript ~/.termtile/tile.scpt up left'
-alias tur='osascript ~/.termtile/tile.scpt up right'
-alias tdl='osascript ~/.termtile/tile.scpt down left'
-alias tdr='osascript ~/.termtile/tile.scpt down right'
-alias tll='osascript ~/.termtile/tile.scpt left'
-alias trr='osascript ~/.termtile/tile.scpt right'
-alias tup='osascript ~/.termtile/tile.scpt up'
-alias tdown='osascript ~/.termtile/tile.scpt down'
-alias tbig='osascript ~/.termtile/resize.scpt '
-alias tcen='osascript ~/.termtile/center.scpt '
-alias tmax='osascript ~/.termtile/maximize.scpt '
-alias tsn='osascript ~/.termtile/changeScreen.scpt next'
-alias tfs='osascript ~/.termtile/fullscreen.scpt '
+  alias wifi="security find-generic-password -ga `/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'` | grep 'password:'"
+  export DOCKER_HOST="tcp://127.0.0.1:2376" 
+  alias oc='sudo openconnect -q --script=~/dev/client/useful/vpn-script-wrapper --user ddl0296 vpn.springer-sbm.com'
+  
+  # termtile
+  alias tul='osascript ~/.termtile/tile.scpt up left'
+  alias tur='osascript ~/.termtile/tile.scpt up right'
+  alias tdl='osascript ~/.termtile/tile.scpt down left'
+  alias tdr='osascript ~/.termtile/tile.scpt down right'
+  alias tll='osascript ~/.termtile/tile.scpt left'
+  alias trr='osascript ~/.termtile/tile.scpt right'
+  alias tup='osascript ~/.termtile/tile.scpt up'
+  alias tdown='osascript ~/.termtile/tile.scpt down'
+  alias tbig='osascript ~/.termtile/resize.scpt '
+  alias tcen='osascript ~/.termtile/center.scpt '
+  alias tmax='osascript ~/.termtile/maximize.scpt '
+  alias tsn='osascript ~/.termtile/changeScreen.scpt next'
+  alias tfs='osascript ~/.termtile/fullscreen.scpt '
+
+fi
+
+
