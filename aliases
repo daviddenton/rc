@@ -9,7 +9,7 @@ alias .......=../../../../../..
 drmf() {
   docker rm -f $1
 }
-alias docker='docker --tlsverify=false'
+alias docker='/usr/bin/docker --tlsverify=false'
 alias drm=drmf
 alias dkill='docker rm -f $(docker ps -aq)'
 alias dps='docker ps'
