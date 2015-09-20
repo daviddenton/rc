@@ -23,6 +23,7 @@ alias ls='ls --color=auto'
 
 #OSX
 if [[ $platform == 'Darwin' ]]; then
+  alias rescue='killall Dock'
   alias docker='/usr/bin/docker --tlsverify=false'
 
   alias dup='docker-machine start boot2docker-vm'
