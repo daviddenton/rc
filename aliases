@@ -23,7 +23,7 @@ alias gup='git pull --rebase'
 alias ls='ls --color=auto'
 
 #OSX
-if [[ $platform == 'Darwin' ]]; then
+if [[ $OSTYPE == darwin* ]]; then
   alias rescue='killall Dock'
   alias docker='/usr/bin/docker --tlsverify=false'
 
