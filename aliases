@@ -25,7 +25,6 @@ alias ls='ls --color=auto'
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
   alias rescue='killall Dock'
-  alias docker='/usr/local/bin/docker --tlsverify=false'
 
   alias dup='docker-machine start default'
 
