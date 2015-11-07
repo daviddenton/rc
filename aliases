@@ -25,9 +25,9 @@ alias ls='ls --color=auto'
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
   alias rescue='killall Dock'
-  alias docker='/usr/bin/docker --tlsverify=false'
+  alias docker='/usr/local/bin/docker --tlsverify=false'
 
-  alias dup='docker-machine start boot2docker-vm'
+  alias dup='docker-machine start default'
 
   alias wifi="security find-generic-password -ga `/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'` | grep 'password:'"
   export DOCKER_HOST="tcp://127.0.0.1:2376" 
