@@ -29,7 +29,7 @@ if [[ $OSTYPE == darwin* ]]; then
   alias dup='docker-machine start default'
 
   alias wifi="security find-generic-password -ga `/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'` | grep 'password:'"
-  export DOCKER_HOST="tcp://127.0.0.1:2376" 
+#  export DOCKER_HOST="tcp://127.0.0.1:2376" 
   
   # termtile
   alias tul='osascript ~/.termtile/tile.scpt up left'
