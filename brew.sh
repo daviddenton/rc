@@ -8,9 +8,11 @@ brew install cask
 brew cask install alfred
 brew cask install crashplan
 brew cask install deeper
+brew cask install deluge
 brew cask install flux
 brew cask install google-chrome
 brew cask install intellij
+brew cask install iterm
 brew cask install java
 brew cask install jiggler
 brew cask install slack
