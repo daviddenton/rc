@@ -20,3 +20,4 @@ brew cask install spotify
 brew cask install sublime-text
 brew cask install tunnelblick
 brew cask install vlc
+brew cask install soundnode
