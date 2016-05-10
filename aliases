@@ -49,7 +49,7 @@ if [[ $OSTYPE == darwin* ]]; then
 
   alias killj='ps -ef | grep java | awk "{print $2}" | xargs kill -9'
 else
-  alias killj='ps -ef | grep java | awk '{print $2}' | xargs kill'
+  alias killj='ps -ef | grep java | awk \'{print $2}\' | xargs kill'
 fi
 
 
