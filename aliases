@@ -22,7 +22,7 @@ alias gup='git pull --rebase'
 
 #misc
 alias ls='ls --color=auto'
-alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
+alias killj='ps -ef | grep java | awk "{print $2}" | xargs kill -9'
 
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
