@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# COPIED FROM: http://askubuntu.com/questions/412046/unable-to-use-intellij-idea-keyboard-shortcuts-on-ubuntu
+# OR TO RUN:
+# wget -O fix-shortcuts.sh https://gist.githubusercontent.com/JonasGroeger/94cfa1071fa12572f465/raw/fix-shortcuts.sh
+
+
 set -euo pipefail
 
 # Disables Ubuntu shortcuts that clash with IntelliJ Idea (and probably other
