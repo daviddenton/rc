@@ -13,6 +13,7 @@ drmf() {
 alias drm=drmf
 alias dkill='docker rm -f $(docker ps -aq)'
 alias dps='docker ps'
+alias de='./docker-env --service-ports -c bash'
 
 #git
 alias gp='git push'
