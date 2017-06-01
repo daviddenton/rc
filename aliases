@@ -1,3 +1,5 @@
+set -e
+
 #shell
 alias ..='cd .. && ls'
 alias ...='cd ../.. && ls'
@@ -15,9 +17,6 @@ alias drm=drmf
 alias dkill='docker rm -f $(docker ps -aq)'
 alias dps='docker ps'
 alias de='./docker-env --service-ports -c bash'
-
-#misc
-alias gct='./gradlew clean test'
 
 #git
 alias gp='git push'
@@ -53,7 +52,9 @@ if [[ $OSTYPE == darwin* ]]; then
   alias tfs='osascript ~/.termtile/fullscreen.scpt '
 fi
 
+#misc
 alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
+alias gct='./gradlew clean test'
 
 
 #git config branch.autosetuprebase always # Force all new branches to automatically use rebase
