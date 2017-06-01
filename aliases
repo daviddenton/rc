@@ -17,7 +17,7 @@ alias dps='docker ps'
 alias de='./docker-env --service-ports -c bash'
 
 #misc
-alias gct='./gradlew clean test`
+alias gct='./gradlew clean test'
 
 #git
 alias gp='git push'
