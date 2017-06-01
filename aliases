@@ -1,13 +1,5 @@
 set -e
 
-#shell
-alias ..='cd .. && ls'
-alias ...='cd ../.. && ls'
-alias ....='cd ../../.. && ls'
-alias .....='cd ../../../.. && ls'
-alias ......='cd ../../../../.. && ls'
-alias .......='cd ../../../../../.. && ls'
-
 #docker
 drmf() {
   docker rm -f $1
