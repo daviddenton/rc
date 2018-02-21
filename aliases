@@ -5,12 +5,30 @@ drmf() {
   docker rm -f $1
 }
 
+#docker
 alias drm=drmf
-alias dkill='docker rm -f $(docker ps -aq)'
+alias dkill='docker rm -vf $(docker ps -aq)'
 alias dps='docker ps'
-alias de='./docker-env --service-ports -c bash'
+alias di='docker images'
+alias drmi='docker rm -f ${docker ps -a -q}'
+
+#k8s
+alias kgpo='kubectl get pods --all-namespaces'
+alias kgp='while true; do kgpo; sleep 5; done'
+alias kwe='kubectl get events -w'
+
+function klogs {
+	FILE=/tmp/k8p
+	kgpo | grep http | awk '{print $1 " " $2 }' | head -1 > $FILE
+	NS=`cat $FILE | awk '{print $1}'`
+	POD=`cat $FILE | awk '{print $2}'`
+	rm -rf $FILE
+	kubectl logs $POD --namespace=$NS
+}
 
 #git
+alias ga='git add ./
+alias gc='git commit -am"update"'
 alias gp='git push'
 alias gst='git status'
 alias grh='git reset --hard'
