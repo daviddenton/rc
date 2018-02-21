@@ -19,7 +19,7 @@ alias kwe='kubectl get events -w'
 
 function klogs {
 	FILE=/tmp/k8p
-	kgpo | grep http | awk '{print $1 " " $2 }' | head -1 > $FILE
+	kgpo | grep $1 | awk '{print $1 " " $2 }' | head -1 > $FILE
 	NS=`cat $FILE | awk '{print $1}'`
 	POD=`cat $FILE | awk '{print $2}'`
 	rm -rf $FILE
