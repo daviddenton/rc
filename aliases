@@ -1,11 +1,6 @@
 set -e
 
 #docker
-drmf() {
-  docker rm -f $1
-}
-
-#docker
 alias drm=drmf
 alias dkill='docker rm -vf $(docker ps -aq)'
 alias dps='docker ps'
