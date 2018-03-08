@@ -28,6 +28,13 @@ alias gst='git status'
 alias grh='git reset --hard'
 alias gup='git pull --rebase'
 
+#java
+alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
+alias gct='./gradlew clean test'
+
+#misc
+alias ls='ls -G'
+
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
   alias rescue='killall Dock'
@@ -52,10 +59,5 @@ if [[ $OSTYPE == darwin* ]]; then
   alias tsn='osascript ~/.termtile/changeScreen.scpt next'
   alias tfs='osascript ~/.termtile/fullscreen.scpt '
 fi
-
-#misc
-alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
-alias gct='./gradlew clean test'
-
 
 #git config branch.autosetuprebase always # Force all new branches to automatically use rebase
