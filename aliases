@@ -8,7 +8,8 @@ alias di='docker images'
 alias drmi='docker rm -f ${docker ps -a -q}'
 
 #k8s
-alias kgp='kubectl get pods -w'
+alias kgpo='kubectl get pods --all-namespaces'
+alias kgp='while true; do kgpo; sleep 5; done'
 alias kwe='kubectl get events -w'
 
 function klogs {
@@ -21,22 +22,15 @@ function klogs {
 }
 
 #git
-alias ga='git add ./'
+alias ga='git add ./
 alias gc='git commit -am"update"'
 alias gp='git push'
 alias gst='git status'
 alias grh='git reset --hard'
 alias gup='git pull --rebase'
 
-
-#java
-alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
-alias gct='./gradlew clean test'
-
 #misc
 alias ls='ls --color=auto'
-alias refresh='source ~/.zshrc'
-alias viz='vi ~/.zshrc'
 
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
@@ -63,5 +57,9 @@ if [[ $OSTYPE == darwin* ]]; then
   alias tfs='osascript ~/.termtile/fullscreen.scpt '
 fi
 
-#git config branch.autosetuprebase always # Force all new branches to automatically use rebase
+#misc
+alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
+alias gct='./gradlew clean test'
 
+
+#git config branch.autosetuprebase always # Force all new branches to automatically use rebase
