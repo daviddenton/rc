@@ -28,8 +28,13 @@ alias gst='git status'
 alias grh='git reset --hard'
 alias gup='git pull --rebase'
 
+#gradle
+alias gct='./gradlew clean test'
+
 #misc
 alias ls='ls --color=auto'
+alias refresh='source ~/.zshrc'
+alias viz='vi ~/.zshrc'
 
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
