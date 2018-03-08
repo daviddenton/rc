@@ -28,9 +28,6 @@ alias gst='git status'
 alias grh='git reset --hard'
 alias gup='git pull --rebase'
 
-#misc
-alias ls='ls --color=auto'
-
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
   alias rescue='killall Dock'
