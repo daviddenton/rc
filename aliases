@@ -1,6 +1,6 @@
 
 #docker
-alias drm=drmf
+alias d=docker
 alias dkill='docker rm -vf $(docker ps -aq)'
 alias dps='docker ps'
 alias di='docker images'
@@ -10,6 +10,7 @@ alias drmi='docker rm -f ${docker ps -a -q}'
 alias kgpa='kubectl get pods --all-namespaces -w'
 alias kgp='kubectl get pods -w'
 alias kwe='kubectl get events -w'
+alias k='kubectl'
 
 function klogs {
 	FILE=/tmp/k8p
