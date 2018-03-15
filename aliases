@@ -12,6 +12,7 @@ alias kgpa='kubectl get pods --all-namespaces -w'
 alias kwe='kubectl get events -w'
 alias kgp='kubectl get pods -w'
 alias kgs='kubectl get svc'
+alias kgi='kubectl get in'
 
 function klogs {
 	FILE=/tmp/k8p
