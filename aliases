@@ -26,6 +26,7 @@ function klogs {
 alias h='helm'
 alias hl='helm list'
 alias hd='helm delete --purge'
+alias hda='hd $(hl -q)'
 
 #git
 alias ga='git add ./'
