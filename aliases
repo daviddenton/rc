@@ -27,6 +27,7 @@ alias h='helm'
 alias hl='helm list'
 alias hd='helm delete --purge'
 alias hda='hd $(hl -q)'
+alias hi='helm upgrade --install'
 
 #git
 alias ga='git add ./'
