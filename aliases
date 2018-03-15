@@ -11,7 +11,7 @@ alias k='kubectl'
 alias kg='k get -w'
 alias kge='kg events'
 alias kgp='kg pod'
-alias kgpa='kg --all-namespaces'
+alias kgpa='kgp --all-namespaces'
 alias kgs='kg svc'
 alias kgi='kg ing'
 
