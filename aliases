@@ -29,7 +29,9 @@ alias h='helm'
 alias hl='h list'
 alias hd='h delete --purge'
 alias hda='hd $(hl -q)'
+alias hdu='h dependency update'
 alias hi='h upgrade --install'
+alias hrl='h repo list'
 
 #git
 alias g='git'
