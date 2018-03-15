@@ -48,6 +48,7 @@ alias gct='./gradlew clean test'
 alias ls='ls -G'
 alias refresh='source ~/.zshrc'
 alias viz='vi ~/.zshrc'
+alias ports='lsof -Pnitcp | grep ESTABLISHED'
 
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
