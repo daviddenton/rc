@@ -1,18 +1,19 @@
 
 #docker
 alias d=docker
-alias dkill='docker rm -vf $(docker ps -aq)'
-alias dps='docker ps'
-alias di='docker images'
-alias drmi='docker rm -f ${docker ps -a -q}'
+alias dkill='d rm -vf $(docker ps -aq)'
+alias dps='d ps'
+alias di='d images'
+alias drmi='d rm -f ${docker ps -a -q}'
 
 #k8s
 alias k='kubectl'
-alias kgpa='kubectl get pods --all-namespaces -w'
-alias kwe='kubectl get events -w'
-alias kgp='kubectl get pods -w'
-alias kgs='kubectl get svc'
-alias kgi='kubectl get in'
+alias kg='k get -w'
+alias kge='kg events'
+alias kgp='kg pod'
+alias kgpa='kg --all-namespaces'
+alias kgs='kg svc'
+alias kgi='kg ingress'
 
 function klogs {
 	FILE=/tmp/k8p
@@ -25,18 +26,19 @@ function klogs {
 
 #helm
 alias h='helm'
-alias hl='helm list'
-alias hd='helm delete --purge'
+alias hl='h list'
+alias hd='h delete --purge'
 alias hda='hd $(hl -q)'
-alias hi='helm upgrade --install'
+alias hi='h upgrade --install'
 
 #git
-alias ga='git add ./'
-alias gc='git commit -am"update"'
-alias gp='git push'
-alias gst='git status'
-alias grh='git reset --hard'
-alias gup='git pull --rebase'
+alias g='git'
+alias ga='g add ./'
+alias gc='g commit -am"update"'
+alias gp='g push'
+alias gst='g status'
+alias grh='g reset --hard'
+alias gup='g pull --rebase'
 
 #java
 alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
