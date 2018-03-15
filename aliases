@@ -13,7 +13,7 @@ alias kge='kg events'
 alias kgp='kg pod'
 alias kgpa='kg --all-namespaces'
 alias kgs='kg svc'
-alias kgi='kg ingress'
+alias kgi='kg ing'
 
 function klogs {
 	FILE=/tmp/k8p
@@ -21,7 +21,7 @@ function klogs {
 	NS=`cat $FILE | awk '{print $1}'`
 	POD=`cat $FILE | awk '{print $2}'`
 	rm -rf $FILE
-	kubectl logs $POD --namespace=$NS
+	k logs $POD --namespace=$NS
 }
 
 #helm
