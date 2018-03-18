@@ -41,6 +41,7 @@ alias gp='g push'
 alias gst='g status'
 alias grh='g reset --hard'
 alias gup='g pull --rebase'
+alias gsc='g clone --depth 1'
 
 #java
 alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
