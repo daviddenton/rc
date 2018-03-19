@@ -14,6 +14,11 @@ alias kgp='kg pod'
 alias kgpa='kgp --all-namespaces'
 alias kgs='kg svc'
 alias kgi='kg ing'
+alias kd='k describe'
+alias kdp='kd pod'
+alias kdi='kd ingress'
+alias kdd='kd deployment'
+alias kds='kd svc'
 
 function klogs {
 	FILE=/tmp/k8p
