@@ -47,6 +47,7 @@ alias gst='g status'
 alias grh='g reset --hard'
 alias gup='g pull --rebase'
 alias gsc='g clone --depth 1'
+alias ges='git filter-branch -f --commit-filter 'git commit-tree -S "$@"' origin/master..HEAD'
 
 #java
 alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
