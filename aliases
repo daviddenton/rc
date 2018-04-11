@@ -67,6 +67,7 @@ alias ls='ls -G'
 alias refresh='source ~/.zshrc'
 alias viz='vi ~/.zshrc'
 alias ports='lsof -Pnitcp | grep ESTABLISHED'
+alias gbb='open https://teal18.atlassian.net/browse/`gbn | egrep  -op 'SD-([^-]+)'`'
 
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
