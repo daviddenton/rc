@@ -41,14 +41,20 @@ alias hrl='h repo list'
 #git
 alias g='git'
 alias ga='g add ./'
-alias gc='g commit -am"update"'
+alias gc='g commit -S -m'
 alias gp='g push'
 alias gst='g status'
 alias grh='g reset --hard'
-alias gup='g pull --rebase'
+alias gpl='g pull'
+alias gpr='gpr --rebase'
+alias gr='g rebase'
+alias grc='gr --continue'
+alias gra='gr --continue'
 alias gsc='g clone --depth 1'
 alias ges='git filter-branch -f --commit-filter 'git commit-tree -S "$@"' origin/master..HEAD'
 alias glog='git log --oneline --decorate --graph --show-signature'
+alias gcm='BRANCH=`git rev-parse --abbrev-ref HEAD` && git checkout master'
+alias gcb='git checkout $BRANCH'
  
 #java
 alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
