@@ -61,6 +61,7 @@ alias gcb='git checkout $BRANCH'
 #java
 alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
 alias gct='./gradlew clean test'
+alias gctd='./gradlew ci_tests_docker'
 
 #misc
 alias ls='ls -G'
