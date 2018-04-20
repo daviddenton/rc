@@ -71,7 +71,6 @@ alias ports='lsof -Pnitcp | grep ESTABLISHED'
 alias gbb="open https://teal18.atlassian.net/browse/`gbn | egrep  -op 'SD-([^-]+)'`"
 alias gcpr="open https://bitbucket.org/teal18/teal/pull-requests/new?source=`gbn`&t=1"
 
-https://bitbucket.org/teal18/teal/pull-requests/new?source=SD-817-removing-app-profile&t=1
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
   alias rescue='killall Dock'
