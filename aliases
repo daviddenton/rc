@@ -68,8 +68,8 @@ alias ls='ls -G'
 alias refresh='source ~/.zshrc'
 alias viz='vi ~/.zshrc'
 alias ports='lsof -Pnitcp | grep ESTABLISHED'
-alias gbb="open https://teal18.atlassian.net/browse/`gbn | egrep  -op 'SD-([^-]+)'`"
-alias gcpr="open https://bitbucket.org/teal18/teal/pull-requests/new?source=`gbn`&t=1"
+alias gbb="open https://teal18.atlassian.net/browse/\`gbn | egrep  -op 'SD-([^-]+)'\`"
+alias gcpr="open https://bitbucket.org/teal18/teal/pull-requests/new?source=\`gbn\`&t=1"
 
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
