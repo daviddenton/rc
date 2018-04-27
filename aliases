@@ -57,6 +57,8 @@ alias glog='git log --oneline --decorate --graph --show-signature'
 alias gbn='git rev-parse --abbrev-ref HEAD'
 alias gcm='BRANCH=`gbn` && git checkout master'
 alias gcb='git checkout $BRANCH'
+alias gpb='g push --set-upstream origin `gbn`'
+alias gp='g pull'
  
 #java
 alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
