@@ -63,7 +63,7 @@ alias gp='g pull'
 #java
 alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
 alias gct='./gradlew clean test'
-alias gbl='./gradlew ktlint build'
+alias gbl='./gradlew generateProto ktlint build'
 
 #misc
 alias ls='ls -G'
