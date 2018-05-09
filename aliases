@@ -72,6 +72,7 @@ alias viz='vi ~/.zshrc'
 alias ports='lsof -Pnitcp | grep ESTABLISHED'
 alias gbb="open https://teal18.atlassian.net/browse/\`gbn | egrep  -op 'SD-([^-]+)'\`"
 alias gcpr="open https://bitbucket.org/teal18/teal/pull-requests/new?source=\`gbn\`&t=1"
+alias sp="docker run --name tealdb -p 5432:5432 -e POSTGRES_PASSWORD=tealpassword -d postgres"
 
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
