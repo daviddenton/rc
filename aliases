@@ -23,10 +23,9 @@ alias kds='kd svc'
 function klogs {
 	FILE=/tmp/k8p
 	k get pod | grep $1 | awk '{print $1 }' | head -1 > $FILE
-	NS=`cat $FILE | awk '{print $1}'`
-	POD=`cat $FILE | awk '{print $2}'`
+	POD=`cat $FILE | awk '{print $1}'`
 	rm -rf $FILE
-	k logs $POD --namespace=$NS
+	k logs $POD -c $1
 }
 
 #helm
