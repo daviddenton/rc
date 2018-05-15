@@ -25,7 +25,7 @@ function klogs {
 	k get pod | grep $1 | awk '{print $1 }' | head -1 > $FILE
 	POD=`cat $FILE | awk '{print $1}'`
 	rm -rf $FILE
-	k logs $POD -c $1
+	k logs $POD -c $1 -f 
 }
 
 #helm
