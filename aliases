@@ -65,7 +65,7 @@ alias gct='./gradlew clean test'
 
 # teal
 alias gbl='./gradlew clean ktlint build'
-alias gbb='./gradlew localPostgres migrations'
+alias gdb='./gradlew localPostgres migrations'
 alias gbb="open https://teal18.atlassian.net/browse/\`gbn | egrep  -op 'SD-([^-]+)'\`"
 alias gcpr="open https://bitbucket.org/teal18/teal/pull-requests/new?source=\`gbn\`&t=1"
 
