@@ -62,16 +62,18 @@ alias gp='g pull'
 #java
 alias killj="ps -ef | grep java | awk '{print $2}' | xargs kill -9"
 alias gct='./gradlew clean test'
+
+# teal
 alias gbl='./gradlew clean ktlint build'
+alias gbb='./gradlew localPostgres migrations'
+alias gbb="open https://teal18.atlassian.net/browse/\`gbn | egrep  -op 'SD-([^-]+)'\`"
+alias gcpr="open https://bitbucket.org/teal18/teal/pull-requests/new?source=\`gbn\`&t=1"
 
 #misc
 alias ls='ls -G'
 alias refresh='source ~/.zshrc'
 alias viz='vi ~/.zshrc'
 alias ports='lsof -Pnitcp | grep ESTABLISHED'
-alias gbb="open https://teal18.atlassian.net/browse/\`gbn | egrep  -op 'SD-([^-]+)'\`"
-alias gcpr="open https://bitbucket.org/teal18/teal/pull-requests/new?source=\`gbn\`&t=1"
-alias sp="docker run --name tealdb -p 5432:5432 -e POSTGRES_PASSWORD=tealpassword -d postgres"
 
 #OSX
 if [[ $OSTYPE == darwin* ]]; then
