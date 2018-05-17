@@ -31,11 +31,18 @@ function klogs {
 #helm
 alias h='helm'
 alias hl='h list'
+alias 
 alias hd='h delete --purge'
 alias hda='hd $(hl -qa)'
 alias hdu='h dependency update'
 alias hi='h upgrade --install'
 alias hrl='h repo list'
+alias hdpr='hda --tiller-namespace='
+
+function hdpr {
+	PR=$1
+	hd --tiller-namespace=$PR $(hl -qa --tiller-namespace=$PR)
+}
 
 #git
 alias g='git'
