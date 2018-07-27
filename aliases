@@ -11,22 +11,16 @@ alias k='kubectl'
 alias kg='k get -w'
 alias kge='kg events'
 alias kgp='kg pod'
+alias kgn='kg ns'
 alias kgpa='kgp --all-namespaces'
 alias kgs='kg svc'
 alias kgi='kg ing'
 alias kd='k describe'
 alias kdp='kd pod'
-alias kdi='kd ingress'
+alias kdi='kd ing'
 alias kdd='kd deployment'
 alias kds='kd svc'
-
-function klogs {
-	FILE=/tmp/k8p
-	k get pod | grep $1 | awk '{print $1 }' | head -1 > $FILE
-	POD=`cat $FILE | awk '{print $1}'`
-	rm -rf $FILE
-	k logs $POD -c $1 -f 
-}
+alias kdn='kd ns'
 
 #helm
 alias h='helm'
