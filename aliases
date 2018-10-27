@@ -21,6 +21,9 @@ alias kdi='kd ing'
 alias kdd='kd deployment'
 alias kds='kd svc'
 alias kdn='kd ns'
+function ktn {
+	kubectl config set-context $(kubectl config current-context) --namespace=$1
+}
 
 #helm
 alias h='helm'
